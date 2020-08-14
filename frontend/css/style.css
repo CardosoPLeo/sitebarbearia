@@ -164,6 +164,7 @@ td, th{
     margin: 0 0 1em;
     clear: left;
 }
+
 .principal p{
     margin: 0 0 1em;
 }
@@ -207,6 +208,9 @@ td, th{
 .itens{
     line-height: 1.5;   
 }
+.itens::before{
+    content: "\272F";
+}
 
 /*pseudo elementos :nth-child()*/
 .itens:first-child{
@@ -215,6 +219,11 @@ td, th{
 
 .imgbeneficios{
     width: 60%;
+    box-shadow: 10px 10px 10px 0 #000000;
+}
+.imgbeneficios:hover{
+    opacity: 70%;
+    transition: 400ms;
 }
 .utensilios{
     width: 120px;
@@ -225,4 +234,21 @@ td, th{
 .video{
     width: 560px;
     margin: 2em auto ;
+}
+
+/*Desing responsivo para celulares(Página Principal)*/
+@media screen and (max-width: 480px){
+    .caixa, .principal, .menu, .conteudo-beneficios, .mapa-conteudo, .video{
+        width: auto;
+    }
+    h1{
+        text-align: center;
+    }
+    nav{
+        position: static;
+    }
+
+    .imgbeneficios, .lista-beneficios{
+        width: 100%;
+    }
 }
